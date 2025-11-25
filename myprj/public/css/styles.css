@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.logo{
+    font-size: 1.5rem;
+    color: blue;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
