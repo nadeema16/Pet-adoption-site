@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### What is this?
 This `README.md` file is auto-created for all new projects.
 
@@ -23,3 +24,7 @@ Click on the **Open Guides Editor** icon to edit the Guide.
 ### How do I delete this file?
 To delete this `README.md` file, right-click (ctrl-click on a Mac) on the file name in the file list.
 ![fileTree](https://global.codio.com/platform/readme.resources/fileTree.png)
+=======
+# Pet-adoption-site
+A site where shelters list adoptable pets and the public can browse, apply, and track application status. All pets, applications, and users are stored in a database.
+>>>>>>> 00d17f7388e7c46e4e3e909e4173df7144caef52
