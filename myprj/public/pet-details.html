@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Details - Pet Adoption</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Adoption</h1>
+                <nav>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <span id="auth-links">
+                        <a href="/login" class="nav-link">Login</a>
+                        <a href="/register" class="btn btn-primary">Register</a>
+                    </span>
+                    <span id="user-links" style="display: none;">
+                        <span id="username-display"></span>
+                        <a href="#" id="dashboard-link" class="nav-link">Dashboard</a>
+                        <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                    </span>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <!-- <div id="loading" class="loading"> Loading -->
+        <div id="pet-detail" style="">
+            <div class="pet-detail-header">
+                <img id="pet-photo" src="" alt="Pet Photo" class="pet-detail-photo">
+                <div class="pet-detail-info">
+                    <h1 id="pet-name">Tom</h1>
+                    <p class="pet-species" id="pet-species">Felion</p>
+                    <div class="pet-meta">
+                        <span class="badge" id="pet-age">2 Years</span>
+                        <span class="badge" id="pet-size">large</span>
+                        <div class="temperament-tags"></div>
+                    </div>
+                    <p class="pet-listed"> Listed-on <span id="pet-date">11-26-2021</span> by <span id="pet-shelter">#Shelter1</span></p>
+                </div>
+            </div>
+            <div class="pet-description">
+                <h2>About</h2>
+                <div id="pet-description" class="markdown-content">
+                    <h3> About Tom</h3>
+                    <p> Tom is a cute grey cat with triple Coat.</p>
+                    <h4> Health Status</h3>
+                    <p> Tom is very healthy and energetic.</p>
+                    <h4> Personal Traits</h3>
+                    <p> Tom is affectionate, calm and Cool.</p>
+                    <h4> Adoption requirements</h3>
+                    <p> Tom would be most suited to a friendly environment with friends.</p>
+                </div>
+            </div>
+            <div id="shelter-contact" class="shelter-contact" style="display: none;">
+                <h2> Contact Shelter</h2>
+                <p><strong>Email:</strong> <span id="">shelter1@petsite.com</span></p>
+                <p><strong>Phone:</strong> <span id="">500-100-0100</span></p>
+            </div>
+        </div>
+    </main>
+    
+ </body>
+</html>
