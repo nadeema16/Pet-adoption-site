@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pets - Pet Adoption</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Adoption</h1>
+                <nav>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <a href="/shelter/dashboard" class="nav-link">Dashboard</a>
+                    <a href="/shelter/pets/new" class="nav-link">List New Pet</a>
+                    <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>My Pets</h1>
+            <p>Manage all pets in your shelter</p>
+        </div>
+
+        <div id="pets-container" class="pets-grid" style="display: none;">
+        </div>
+        <div id="empty-state" style="display: none;" class="empty-state">
+            <p>You haven't listed any pets yet.</p>
+            <a href="/shelter/pets/new" class="btn btn-primary">List Your First Pet</a>
+        </div>
+    </main>
+
+</body>
+</html>
+

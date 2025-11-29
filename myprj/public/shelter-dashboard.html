@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelter Dashboard - Pet Adoption</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Adoption</h1>
+                <nav>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <a href="/shelter/dashboard" class="nav-link active">Dashboard</a>
+                    <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="page-header">
+            <h1>Welcome, <span id="shelter-name"></span>.</h1>
+            <p>Manage your Pets and Applications</p>
+        </div>
+        <div id="dashboard-content">
+            <div class="dashboard-actions">
+                <a href="/shelter/pets/new" class="btn btn-primary">List a New Pet</a>
+                <a href="/shelter/pets" class="btn btn-secondary">My Pets</a>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-pets">0</div>
+                    <div class="stat-label">Total Pets Listed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="active-pets">0</div>
+                    <div class="stat-label">Active Pets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="adopted-pets">0</div>
+                    <div class="stat-label">Adopted Pets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="pending-apps">0</div>
+                    <div class="stat-label">Pending Applications</div>
+                </div>
+            </div>
+            <section class="recent-applications">
+                <h2>Recent Applications</h2>
+                <div id="recent-applications-list" class="application-list">
+                </div>
+                <div id="no-recent-apps" class="empty-state" style="display: none;">
+                    <p>No Applications yet.
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

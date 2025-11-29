@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications - Pet Adoption</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Adoption</h1>
+                <nav>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <a href="/adopter/dashboard" class="nav-link active">My Applications</a>
+                    <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="page-header">
+            <h1>My Applications</h1>
+            <p> Track the Status of your adoption Requests</p>
+        </div>
+        <div id="applications-container" class="application-grip">
+        </div>
+        <div id="empty-state" style="display: none;" class="empty-state">
+            <p>You have not submitted any Applications yet.</p>
+            <a href="/home" class="btn btn-primary">Browse Available Pets</a>
+        </div>
+    </main>
+
+</body>
+</html>

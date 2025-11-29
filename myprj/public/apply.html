@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply to Adopt - Pet Adoption</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Adoption</h1>
+                <nav>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <a href="/adopter/dashboard" class="nav-link">Dashboard</a>
+                    <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="page-header">
+            <h1>Apply to Adopt</h1>
+            <p id="pet-name-header"></p>
+        </div>
+        <form id="application-form" class="form-card">
+            <div class="form-group">
+                <label for="pet-name">Pet Name</label>
+                <input type="text" id="pet-name" name="pet-name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="your-name">Name</label>
+                <input type="text" id="your-name" name="your-name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="emali">Email</label>
+                <input type="text" id="email" name="email" readonly>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="home-setup">Home Setup*</label>
+                <textarea id="home-setup" name="home-setup" rows="4" required placeholder="Describe your living Situation">
+                </textarea>
+            </div>
+            <div class="form-group">
+                <label for="prior-pets">Pet Name</label>
+                <textarea id="prior-pets" name="prior-pets" rows="4" required placeholder="Tell us about your prior Experience with Pets"></textarea>
+            </div>
+            <div id="error-message" class="error-message" style="display: none;"></div
+            <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+    </main>
+
+</body>
+</html>
