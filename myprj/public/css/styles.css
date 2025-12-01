@@ -96,3 +96,511 @@ nav{
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
 }
+.hero{
+    test-align: center;
+    padding: 3rem 0;
+}
+.hero h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+.hero p{
+    font-size: 1.2rem;
+    color: #333;
+}
+.pet-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fx));
+    gap: 2rem;
+    padding: 1.6rem 0;
+}
+.pet-card{
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.pet-card:hover{
+    transform: translate(-4px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.pet-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.pet-card-content{
+    padding: 1.5rem;
+}
+.pet-card h3{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.pet-card-meta{
+    color: #666;
+    font-size: 0.9rem;
+}
+.pet-details-header{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+.pet-details-photo{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.pet-details-info h1{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.pet-species{
+    font-size: 1.25rem;
+    color:#666;
+    margin-bottom: 1rem;
+}
+.pet-meta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.badge{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #4A90E2;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.badge.secondary{
+    background-color: #50C878;
+}
+.temperament-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.temperament-tag{
+    padding: 0.25rem 0.75rem;
+    background-color: #e8f4f8;
+    color: #4A90E2;
+    border-radius: 15px;
+    font-size: 0.875rem;
+}
+.pet-listed{
+    color: #666;
+    margin-top: 1rem;
+}
+.pet-description{
+    background: white;
+    padding: 2rem;
+    border-radius: 8rpx;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+.pet-description h2{
+    margin-bottom: 1rem;
+    color: #333;
+}
+.markdown-content p{
+    margin-bottom: 1rem;
+}
+.markdown-content strong{
+    font-weight: 600;
+}
+.shelter-contact{
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+.shelter-contact h2{
+    margin-bottom: 1rem;
+}
+.auth-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem 0;
+}
+.auth-card{
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+}
+.auth-card h2{
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+.form-card{
+    backgroud: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+.form-group{
+    margin-bottom: 1.5rem;
+}
+.form-group label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    content: #333;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: #4A90E2;
+}
+.form-group textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+.form-group small{
+    display: block;
+    margin-top: 0.25rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+.radio-group{
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+.radiolabel{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.checkbox-group{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+}
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.auth-footer{
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+.auth-footer a{
+    color: #4A90E2;
+    text-decoration: none;
+}
+.auth-footer a:hover{
+    text-decoration: underline;
+}
+.form-actions{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.error-message{
+    background-color: whitesmoke;
+    color: #e74c3c;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border-left: 4px solid #e74c3c;
+}
+.success-message{
+    background-color: whitesmoke;
+    color: #27ae60;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border-left: 4px solid #27ae60;
+}
+.empty-state{
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+.empty-state p{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+.page-header{
+    margin: 2rem 0;
+}
+.page-header h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.page-header p{
+    color: #666;
+}
+.dashboard-actions{
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.state-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.stat-card{
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.stat-value{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4A90E2;
+    margin-bottom: 0.5rem;
+}
+.stat-label{
+    color: #666;
+    font-size: 1rem;
+}
+.recent-applications{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+.recent-applications h2{
+    margin-bottom: 1.5rem;
+}
+.application-card{
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.application-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.application-header{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.application-header img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.application-info h3{
+    margin-bottom: 0.25rem;
+}
+.application-info a{
+    color: #4A90E2;
+    text-decoration: none;
+}
+.application-info a:hover{
+    text-decoration: underline;
+}
+.status-badge{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+.status-submitted{
+    background-color: #3498db;
+    color: white;
+}
+.status-under_review{
+    background-color: #c0392b;
+    color: white;
+}
+.status-approved{
+    background-color: #27ae60;
+    color: white;
+}
+.status-declined{
+    background-color: #e74c3c;
+    color: white;
+}
+.application-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.application-list-detailed{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.application-detail-card{
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.application-detail-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.application-detail-info h3{
+    margin-bottom: 0.5rem;
+}
+.application-detail-meta{
+    color: #666;
+    font-size: 0.9rem;
+}
+.application-content{
+    margin: 1rem 0;
+}
+.application-content h4{
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.application-content p{
+    color: #666;
+    white-space: pre-wrap;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.application-actions{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.pet-header{
+    display: flex;
+    gap: 2.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    align-items: center;
+}
+.pet-thumbnail-large{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.pet-header h1{
+    margin-bottom: 0.5rem;
+}
+.pet-management-card{
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.pet-management-card img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.pet-management-info{
+    flex: 1;
+}
+.pet-management-info h3{
+    margin-bottom: 0.5rem;
+}
+.pet-management-info a{
+    color: #4A90E2;
+    text-decoration: none;
+}
+.pet-management-info a:hover{
+    text-decoration: underline;
+}
+.pet-management-meta{
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+.pet-management-actions{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.status-toggle{
+    padding:0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.3s;
+}
+.status-toggle.active{
+    background-color: #27ae60;
+    color: white;
+}
+.status-toggle.inactive{
+    background-color: #6c767d;
+    color: white;
+}
+.pending-badge{
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
