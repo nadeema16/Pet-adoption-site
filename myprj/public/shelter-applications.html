@@ -21,23 +21,27 @@
         </div>
     </header>
     <main class="container">
-
         <div id="applications-content" style="display: none;">
             <div class="pet-header">
-                <img id="pet-photo" src="" alt="Pet Photo" class="pet-thumbnail-large">
+                <img id="pet-photo" src="" alt="Pet photo" class="pet-thumbnail-large">
                 <div>
                     <h1 id="pet-name"></h1>
                     <p id="pet-species"></p>
                 </div>
             </div>
             <div class="page-header">
-                <h2>Adoption Application</h2>
+                <h2>Adoption Applications</h2>
                 <p id="applications-count"></p>
             </div>
             <div id="applications-list" class="applications-list-detailed">
             </div>
+            <div id="no-apps" class="empty-state" style="display: none;">
+                <p>No applications for this pet yet.</p>
+            </div>
         </div>
+        <div id="error-message" class="error-message" style="display: none;"></div>
     </main>
-
+    <script src="/js/main.js"></script>
+    <script src="/js/shelter-applications.js"></script>
 </body>
 </html>

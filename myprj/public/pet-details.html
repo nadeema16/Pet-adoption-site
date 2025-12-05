@@ -27,40 +27,34 @@
         </div>
     </header>
     <main class="container">
-        <div id="pet-detail" style="">
+        <div id="pet-details" style="display: none;">
             <div class="pet-detail-header">
-                <img id="pet-photo" src="" alt="Pet Photo" class="pet-detail-photo">
+                <img id="pet-photo" src="" alt="Pet photo" class="pet-detail-photo">
                 <div class="pet-detail-info">
-                    <h1 id="pet-name">Tom</h1>
-                    <p class="pet-species" id="pet-species">Felion</p>
+                    <h1 id="pet-name"></h1>
+                    <p class="pet-species" id="pet-species"></p>
                     <div class="pet-meta">
-                        <span class="badge" id="pet-age">2 Years</span>
-                        <span class="badge" id="pet-size">large</span>
-                        <div class="temperament-tags"></div>
+                        <span class="badge" id="pet-age"></span>
+                        <span class="badge" id="pet-size"></span>
+                        <div id="temperament-tags"></div>
                     </div>
-                    <p class="pet-listed"> Listed-on <span id="pet-date">11-26-2021</span> by <span id="pet-shelter">#Shelter1</span></p>
+                    <p class="pet-listed">Listed on <span id="pet-date"></span> by <span id="pet-shelter"></span></p>
                 </div>
             </div>
+            <div class="pet-actions" id="pet-actions"></div>
             <div class="pet-description">
                 <h2>About</h2>
-                <div id="pet-description" class="markdown-content">
-                    <h3> About Tom</h3>
-                    <p> Tom is a cute grey cat with triple Coat.</p>
-                    <h4> Health Status</h3>
-                    <p> Tom is very healthy and energetic.</p>
-                    <h4> Personal Traits</h3>
-                    <p> Tom is affectionate, calm and Cool.</p>
-                    <h4> Adoption requirements</h3>
-                    <p> Tom would be most suited to a friendly environment with friends.</p>
-                </div>
+                <div id="pet-description" class="markdown-content"></div>
             </div>
             <div id="shelter-contact" class="shelter-contact" style="display: none;">
-                <h2> Contact Shelter</h2>
-                <p><strong>Email:</strong> <span id="">shelter1@petsite.com</span></p>
-                <p><strong>Phone:</strong> <span id="">500-100-0100</span></p>
+                <h2>Contact Shelter</h2>
+                <p><strong>Email:</strong> <span id="shelter-email"></span></p>
+                <p><strong>Phone:</strong> <span id="shelter-phone"></span></p>
             </div>
         </div>
+        <div id="error-message" class="error-message" style="display: none;"></div>
     </main>
-    
- </body>
+    <script src="/js/main.js"></script>
+    <script src="/js/pet-details.js"></script>
+</body>
 </html>

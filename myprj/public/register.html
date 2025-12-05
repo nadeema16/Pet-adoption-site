@@ -10,11 +10,11 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1 class="logo">🐾 Pet adoption</h1>
+                <h1 class="logo">🐾 Pet Adoption</h1>
                 <nav>
-                    <a href="/home" class="nav-link">Browse Pets</a>
-                    <a href="/login" class="btn btn-primary">Login</a>
-                    <a href="/resgister" class="btn btn-primary active">Register</a>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <a href="/login" class="nav-link">Login</a>
+                    <a href="/register" class="btn btn-primary active">Register</a>
                 </nav>
             </div>
         </div>
@@ -25,45 +25,49 @@
                 <h2>Create Account</h2>
                 <form id="register-form">
                     <div class="form-group">
-                        <label for="username">UserName *</label>
-                        <input type="text" id="username" placeholder="Enter Username" required>
+                        <label for="username">Username *</label>
+                        <input type="text" id="username" name="username" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="text" id="email" placeholder="Enter Email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone *</label>
-                        <input type="tel" id="phone" placeholder="Enter PhoneNumber" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <small>Required for shelters</small>
                     </div>
                     <div class="form-group">
                         <label for="password">Password *</label>
-                        <input type="password" id="password" placeholder="Enter Password" minlength="6">
+                        <input type="password" id="password" name="password" required minlength="6">
                     </div>
                     <div class="form-group">
-                        <label for="c-password">UserName *</label>
-                        <input type="password" id="c-password" placeholder="Confirm Password">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
                     </div>
-                    <div class="form-group"> 
+                    <div class="form-group">
                         <label>Account Type *</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" id="user-type" value="adoptor" checked>
-                                <span> Adoptor</span>
+                                <input type="radio" name="userType" value="adopter" checked>
+                                <span>Adopter</span>
                             </label>
                             <label class="radio-label">
-                                <input type="radio" id="user-type" value="shelter" checked>
+                                <input type="radio" name="userType" value="shelter">
                                 <span>Shelter</span>
                             </label>
                         </div>
                     </div>
+                    <div id="error-message" class="error-message" style="display: none;"></div>
                     <button type="submit" class="btn btn-primary btn-block">Register</button>
                 </form>
                 <p class="auth-footer">
-                    Already Signed-up? <a href="/login"> Login Here</a>
+                    Already have an account? <a href="/login">Login here</a>
                 </p>
             </div>
         </div>
     </main>
+    <script src="/js/main.js"></script>
+    <script src="/js/register.js"></script>
 </body>
 </html>

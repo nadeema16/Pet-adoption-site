@@ -21,10 +21,10 @@
     </header>
     <main class="container">
         <div class="page-header">
-            <h1>Welcome, <span id="shelter-name"></span>.</h1>
-            <p>Manage your Pets and Applications</p>
+            <h1>Welcome, <span id="shelter-name"></span>!</h1>
+            <p>Manage your pets and applications</p>
         </div>
-        <div id="dashboard-content">
+        <div id="dashboard-content" style="display: none;">
             <div class="dashboard-actions">
                 <a href="/shelter/pets/new" class="btn btn-primary">List a New Pet</a>
                 <a href="/shelter/pets" class="btn btn-secondary">My Pets</a>
@@ -49,14 +49,16 @@
             </div>
             <section class="recent-applications">
                 <h2>Recent Applications</h2>
-                <div id="recent-applications-list" class="application-list">
+                <div id="recent-applications-list" class="applications-list">
                 </div>
                 <div id="no-recent-apps" class="empty-state" style="display: none;">
-                    <p>No Applications yet.
+                    <p>No applications yet.</p>
                 </div>
             </section>
         </div>
     </main>
-
+    <script src="/js/main.js"></script>
+    <script src="/js/shelter-dashboard.js"></script>
 </body>
 </html>
+

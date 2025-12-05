@@ -1,24 +1,23 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('login-form');
-    const eMsg = document.getElementById('error-message');
-
-    const urlE = getUrlParameter('error');
-    if(urlE){
-        showError(urlE);
+    const errorMessage = document.getElementById('error-message');
+    const urlError = getUrlParameter('error');
+    if (urlError) {
+        showError(urlError);
     }
-    form.addEventListener('submit', async(e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         hideError();
-        const formData={
+        const formData = {
             username: document.getElementById('username').value.trim(),
             password: document.getElementById('password').value
         };
-        if(!formData.username || !formData.password){
-            showError('Please Fill in All the Fields');
+        if (!formData.username || !formData.password) {
+            showError('Please fill in all fields');
             return;
         }
-        try{
-            const response=await fetch('/login', {
+        try {
+            const response = await fetch('/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -26,14 +25,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 body: JSON.stringify(formData)
             });
             const data = await response.json();
-            if(!response.ok){
+            if (!response.ok) {
                 showError(data.error || 'Login failed');
                 return;
             }
             window.location.href = data.redirect || '/';
-        } catch(error){
+        } catch (error) {
             console.error('Login error:', error);
-            showError('An Error Occured, try Again');
+            showError('An error occurred. Please try again.');
         }
     });
 });
