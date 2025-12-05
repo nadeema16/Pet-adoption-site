@@ -2,9 +2,10 @@
   "name": "myprj",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "init-db": "node database/init.js"
   },
   "keywords": ["pet", "adoption", "shelter"],
   "author": "",
@@ -17,8 +18,5 @@
     "marked": "^11.1.1",
     "bcrypt": "^5.1.1",
     "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
   }
 }
