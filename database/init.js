@@ -137,7 +137,7 @@ Max would do best in a home with a yard where he can run and play. An active fam
     {
       name: 'Luna', species_breed: 'Siamese Cat', age: 'adult (4-7 years)', 
       size: 'small', temperament: 'affectionate, calm, independent',
-      photo_url: 'https://placekitten.com/400/400?id=1',
+      photo_url: 'https://cataas.com/cat?id=1',
       description: `## About Luna
 
 Luna is a **beautiful Siamese cat** who's ready to find her perfect human companion. At 5 years old, she's past the kitten phase and is looking for a calm, loving home.
@@ -171,7 +171,7 @@ Charlie needs an experienced owner who understands large dog breeds. A home with
     {
       name: 'Bella', species_breed: 'Persian Cat', age: 'senior (8+ years)', 
       size: 'small', temperament: 'calm, gentle, affectionate',
-      photo_url: 'https://placekitten.com/400/400?id=2',
+      photo_url: 'https://cataas.com/cat?id=2',
       description: `## About Bella
 
 Bella is a **sweet senior Persian cat** looking for a peaceful retirement home. At 9 years old, she's calm, gentle, and full of love to give.
@@ -205,7 +205,7 @@ Rocky needs a home ready for puppy life! This means puppy-proofing, house-traini
     {
       name: 'Daisy', species_breed: 'Tabby Cat', age: 'young (1-3 years)', 
       size: 'small', temperament: 'playful, independent, friendly',
-      photo_url: 'https://placekitten.com/400/400?id=3',
+      photo_url: 'https://cataas.com/cat?id=3',
       description: `## About Daisy
 
 Daisy is a **charming young Tabby cat** full of personality! At 2 years old, she's playful yet independent, making her a delightful companion.
@@ -239,7 +239,7 @@ Cooper would do best in a home where he can get regular exercise. Daily walks ar
     {
       name: 'Lucy', species_breed: 'Maine Coon', age: 'adult (4-7 years)', 
       size: 'medium', temperament: 'gentle, affectionate, calm',
-      photo_url: 'https://placekitten.com/400/400?id=4',
+      photo_url: 'https://cataas.com/cat?id=4',
       description: `## About Lucy
 
 Lucy is a **magnificent Maine Coon** with a gentle soul. At 6 years old, she's mature, calm, and ready to be your loving companion.
@@ -273,7 +273,7 @@ Milo would do well in various living situations - apartments, houses, with or wi
     {
       name: 'Sadie', species_breed: 'Calico Cat', age: 'adult (4-7 years)', 
       size: 'small', temperament: 'independent, affectionate, playful',
-      photo_url: 'https://placekitten.com/400/400?id=5',
+      photo_url: 'https://cataas.com/cat?id=5',
       description: `## About Sadie
 
 Sadie is a **stunning Calico cat** with a big personality! At 5 years old, she's independent yet affectionate, making her a wonderful companion.
