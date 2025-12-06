@@ -57,16 +57,6 @@ async function initDatabase() {
     if (err) console.error('Error creating applications table:', err);
     else console.log('✓ Applications table created');
   });
-  db.run(`CREATE TABLE IF NOT EXISTS mock_emails (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    recipient_email TEXT NOT NULL,
-    subject TEXT NOT NULL,
-    body TEXT NOT NULL,
-    sent_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  )`, (err) => {
-    if (err) console.error('Error creating mock_emails table:', err);
-    else console.log('✓ Mock_Emails table created');
-  });
   setTimeout(async () => {
     await seedData();
     db.close();
