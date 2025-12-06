@@ -33,5 +33,4 @@ app.use((err, req, res, next) => {
 });
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
-    console.log(`make sure you run "npm run init-db" before 'npm start'`);
 });

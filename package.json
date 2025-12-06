@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "npm install && npm run init-db",
     "start": "node server.js",
     "init-db": "node database/init.js"
   },
