@@ -69,6 +69,9 @@ async function seedData() {
     { username: 'shelter1', email: 'shelter1@example.com', phone: '(555) 001-0001' },
     { username: 'shelter2', email: 'shelter2@example.com', phone: '(555) 002-0002' }
   ];
+  const adopters = [
+    { username: 'aiza', email: 'aiza@example.com', phone: null }
+  ];
   const shelterIds = [];
   for (const shelter of shelters) {
     await new Promise((resolve, reject) => {
@@ -89,6 +92,27 @@ async function seedData() {
                 if (!err && row) shelterIds.push(row.id);
                 resolve();
               });
+            }
+            resolve();
+          }
+        }
+      );
+    });
+  }
+  // Insert adopter user
+  for (const adopter of adopters) {
+    await new Promise((resolve, reject) => {
+      db.run(
+        `INSERT OR IGNORE INTO users (username, password, user_type, email, phone) 
+         VALUES (?, ?, ?, ?, ?)`,
+        [adopter.username, hashedPassword, 'adopter', adopter.email, adopter.phone],
+        function(err) {
+          if (err) {
+            console.error(`Error inserting ${adopter.username}:`, err);
+            reject(err);
+          } else {
+            if (this.changes > 0) {
+              console.log(`✓ Created adopter: ${adopter.username}`);
             }
             resolve();
           }

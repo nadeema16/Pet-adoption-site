@@ -6,6 +6,12 @@ const marked = require('marked');
 const { requireAuth, requireShelter } = require('../middleware/auth');
 const router = express.Router();
 const dbPath = path.join(__dirname, '..', 'database', 'database.sqlite');
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, '..', 'public', 'uploads'));
@@ -293,13 +299,10 @@ router.put('/api/pet/:id/status', requireAuth, requireShelter, (req, res) => {
           db.close();
           return res.status(500).json({ error: 'Error updating status' });
         }
+        db.close();
+        res.json({ success: true });
       }
     );
   });
 });
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-}
 module.exports = router;

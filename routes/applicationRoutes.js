@@ -4,6 +4,12 @@ const path = require('path');
 const { requireAuth, requireAdopter, requireShelter } = require('../middleware/auth');
 const router = express.Router();
 const dbPath = path.join(__dirname, '..', 'database', 'database.sqlite');
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
+
 router.get('/apply/:petId', requireAuth, requireAdopter, (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'apply.html'));
 });
@@ -210,22 +216,26 @@ router.put('/api/application/:id/status', requireAuth, requireShelter, (req, res
           if (err) {
             db.close();
             return res.status(500).json({ error: 'Error updating status' });
+          }          
+          if (status === 'approved') {
+            db.run(
+              'UPDATE pets SET status = ? WHERE id = ?',
+              ['adopted', application.pet_id],
+              function(err) {
+                if (err) {
+                  console.error('Error updating pet status:', err);
+                }
+                db.close();
+                res.json({ success: true });
+              }
+            );
+          } else {
+            db.close();
+            res.json({ success: true });
           }
-          const statusMessages = {
-            'under_review': 'Your application is now under review',
-            'approved': 'Congratulations! Your application has been approved',
-            'declined': 'Unfortunately, your application has been declined'
-          };
-          db.close();
-          res.json({ success: true });
         }
       );
     }
   );
 });
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-}
 module.exports = router;
