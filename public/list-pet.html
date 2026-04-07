@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List a New Pet - Pet Adoption</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Adoption</h1>
+                <nav>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <a href="/shelter/dashboard" class="nav-link">Dashboard</a>
+                    <a href="/shelter/pets" class="nav-link">My Pets</a>
+                    <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="page-header">
+            <h1>List a New Pet</h1>
+            <p>Add a new pet to your shelter's listings</p>
+        </div>
+        <form id="list-pet-form" class="form-card">
+            <div class="form-group">
+                <label for="name">Pet Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="species-breed">Species/Breed *</label>
+                <input type="text" id="species-breed" name="species-breed" required 
+                    placeholder="e.g., Labrador Retriever, Siamese Cat">
+            </div>
+            <div class="form-group">
+                <label for="photo">Photo *</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                <small>Accepted formats: JPG, PNG, GIF (max 5MB)</small>
+            </div>
+            <div class="form-group">
+                <label for="age">Age *</label>
+                <input type="text" id="age" name="age" required 
+                    placeholder="e.g., puppy/kitten, young (1-3 years), adult (4-7 years), senior (8+ years)">
+            </div>
+            <div class="form-group">
+                <label for="size">Size *</label>
+                <select id="size" name="size" required>
+                    <option value="">Select size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Temperament * (select all that apply)</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="friendly">
+                        <span>Friendly</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="playful">
+                        <span>Playful</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="calm">
+                        <span>Calm</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="energetic">
+                        <span>Energetic</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="gentle">
+                        <span>Gentle</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="protective">
+                        <span>Protective</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="independent">
+                        <span>Independent</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="affectionate">
+                        <span>Affectionate</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description * (Markdown supported)</label>
+                <textarea id="description" name="description" rows="10" required 
+                    placeholder="Write a detailed description about the pet in Markdown format. Include health status, personality traits, and adoption requirements."></textarea>
+                <small>You can use Markdown syntax for formatting</small>
+            </div>
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">List Pet</button>
+                <a href="/shelter/dashboard" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </main>
+    <script src="/js/main.js"></script>
+    <script src="/js/list-pet.js"></script>
+</body>
+</html>

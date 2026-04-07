@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Details - Pet Adoption</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Adoption</h1>
+                <nav>
+                    <a href="/" class="nav-link">Browse Pets</a>
+                    <span id="auth-links">
+                        <a href="/login" class="nav-link">Login</a>
+                        <a href="/register" class="btn btn-primary">Register</a>
+                    </span>
+                    <span id="user-links" style="display: none;">
+                        <span id="username-display"></span>
+                        <a href="#" id="dashboard-link" class="nav-link">Dashboard</a>
+                        <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                    </span>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div id="pet-details" style="display: none;">
+            <div class="pet-detail-header">
+                <img id="pet-photo" src="" alt="Pet photo" class="pet-detail-photo">
+                <div class="pet-detail-info">
+                    <h1 id="pet-name"></h1>
+                    <p class="pet-species" id="pet-species"></p>
+                    <div class="pet-meta">
+                        <span class="badge" id="pet-age"></span>
+                        <span class="badge" id="pet-size"></span>
+                        <div id="temperament-tags"></div>
+                    </div>
+                    <p class="pet-listed">Listed on <span id="pet-date"></span> by <span id="pet-shelter"></span></p>
+                </div>
+            </div>
+            <div class="pet-actions" id="pet-actions"></div>
+            <div class="pet-description">
+                <h2>About</h2>
+                <div id="pet-description" class="markdown-content"></div>
+            </div>
+            <div id="shelter-contact" class="shelter-contact" style="display: none;">
+                <h2>Contact Shelter</h2>
+                <p><strong>Email:</strong> <span id="shelter-email"></span></p>
+                <p><strong>Phone:</strong> <span id="shelter-phone"></span></p>
+            </div>
+        </div>
+        <div id="error-message" class="error-message" style="display: none;"></div>
+    </main>
+    <script src="/js/main.js"></script>
+    <script src="/js/pet-details.js"></script>
+</body>
+</html>
